@@ -1,0 +1,52 @@
+---
+title: "Understanding the SILVER Stock Candlestick Chart"
+sidebarTitle: "Chart"
+description: "Learn how to read the real-time candlestick chart in Mario Nintendo, including price bars, wicks, the live price line, and dynamic scaling."
+---
+
+The candlestick chart is the heart of Mario Nintendo. It displays the full price history of SILVER stock visible in your current session, updating in real time as each new price block is completed. Up to **32 blocks** are shown at once, giving you a rolling window of recent market activity to inform your buy and sell decisions.
+
+## Candlestick Anatomy
+
+Each bar on the chart represents one completed price block — a discrete period of simulated trading activity. Every candlestick is made up of two parts:
+
+- **Body** — The thick, filled rectangle spanning from the block's **opening price** to its **closing price**.
+- **Wicks** (also called shadows) — The thin lines extending above and below the body, representing the block's **highest** and **lowest** prices reached during that period.
+
+### Color Coding
+
+The body color immediately tells you whether the price moved up or down over that block:
+
+| Color | Meaning |
+|-------|---------|
+| 🟢 **Green** | Closing price was **higher** than the opening price (bullish / up block) |
+| 🔴 **Red** | Closing price was **lower** than the opening price (bearish / down block) |
+
+A long body indicates a large price swing during the block; a short body means prices were relatively stable. Long wicks suggest significant intra-block volatility even if the open and close were close together.
+
+## Live Price Line
+
+A horizontal **cyan line** stretches across the full width of the chart at all times. This line marks the **current live price** of SILVER stock — the exact price you would pay or receive if you traded right now. As the price fluctuates in real time, this line moves up and down continuously, giving you an instant visual reference for where the market stands relative to recent history.
+
+## The Active (Developing) Block
+
+On the far right edge of the chart you will always see a **hollow outline block** — an unfilled candlestick drawn with just a border and no solid fill color. This is the **currently developing block**: it represents the price action that is happening *right now*, before the block period has closed.
+
+As the live price moves, the hollow block stretches or shrinks in real time to reflect the current open, high, low, and tentative close. Once the countdown timer reaches zero, the developing block finalizes, becomes a fully colored candlestick, and a new hollow block starts forming to its right.
+
+## Dynamic Y-Axis Price Scale
+
+The vertical axis (Y-axis) on the left side of the chart displays **6 evenly spaced price labels**. These labels are not fixed — the scale adjusts dynamically based on the price range of all blocks currently visible in the chart window:
+
+- The **bottom** of the axis is set to the lowest wick price among visible blocks, multiplied by **0.98** (adding a small buffer below).
+- The **top** of the axis is set to the highest wick price among visible blocks, multiplied by **1.02** (adding a small buffer above).
+
+This means the chart always zooms to fit the current visible price action, making it easy to spot swings and trends without the scale becoming too compressed or stretched. When the visible window shifts as new blocks arrive, the scale will re-fit automatically.
+
+## Next Block Countdown
+
+In the header bar toward the center-right of the screen, you will see a **"Next Block: Xs"** timer counting down. This tells you exactly how many seconds remain before the current developing block closes and a new one begins. Use this timer to anticipate when a new price bar will be locked in and plan your trades accordingly.
+
+<Note>
+The chart auto-scrolls as new blocks are added. Older blocks slide to the left and eventually disappear off the left edge once more than ~32 blocks have accumulated. There is no way to scroll back to view older data — only the most recent price history is visible at any time.
+</Note>

@@ -1,0 +1,47 @@
+{
+  "projectType": "frontend",
+  "projectName": "Mario Nintendo",
+  "projectDescription": "A browser-based fake stock market simulator game where players buy and sell SILVER stock in real time using candlestick charts.",
+  "theme": "almond",
+  "primaryColor": "#ffdf02",
+  "lightColor": "#e60012",
+  "darkColor": null,
+  "navigation": {
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": ["introduction", "how-to-play"]
+      },
+      {
+        "group": "Gameplay",
+        "pages": ["gameplay/chart", "gameplay/buying-selling", "gameplay/portfolio", "gameplay/keyboard-controls"]
+      },
+      {
+        "group": "Strategy",
+        "pages": ["strategy/reading-candlesticks", "strategy/tips"]
+      },
+      {
+        "group": "Reference",
+        "pages": ["reference/price-simulation", "reference/faq"]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Real-time candlestick chart with live price updates every second",
+    "Buy and sell SILVER stock shares using on-screen buttons or keyboard shortcuts",
+    "Dynamic portfolio tracker showing cash, shares held, and net worth",
+    "Random price spikes and drops for unpredictable market simulation",
+    "Live price indicator line showing the current market price at a glance",
+    "Active developing candlestick block preview in real time",
+    "Keyboard shortcuts: B to Buy, S to Sell, Q to Quit",
+    "Fully browser-based — no install required"
+  ],
+  "publicApiSurface": [
+    "buy_share() — purchases one share at the current market price",
+    "sell_share() — sells one share at the current market price",
+    "MarketSimulation.tick_micro_price() — advances the price simulation by one frame",
+    "MarketSimulation.finalize_block() — closes the current candlestick and starts a new one",
+    "Keyboard: B (buy), S (sell), Q (quit/stop simulation)",
+    "Click: BUY button, SELL button on canvas"
+  ]
+}

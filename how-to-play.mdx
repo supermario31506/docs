@@ -1,0 +1,129 @@
+---
+title: "How to Play Mario Nintendo Stock Simulator"
+sidebarTitle: "How to Play"
+description: "Learn how to buy and sell SILVER stock, track your net worth, and survive the wild price swings in Mario Nintendo's browser-based market simulator."
+---
+
+Mario Nintendo drops you straight into a live, browser-based stock market where **SILVER** is the only ticker that matters. No installs, no sign-ups — just open the file, watch the candlestick chart tick in real time, and try to grow your starting stake of **$250.00 cash + 1 share** into something worth bragging about. Prices update every frame, candles lock in every second, and the market can reward or punish you without warning. The goal is simple: buy low, sell high, and don't let your net worth hit the floor.
+
+## Core Gameplay Loop
+
+<Steps>
+  <Step title="Open the Game">
+    Open the single HTML file in any modern browser — Chrome, Firefox, Edge, or Safari all work. The simulation starts immediately; there is nothing to install or configure.
+  </Step>
+
+  <Step title="Watch the Candlestick Chart">
+    The chart fills the screen with live SILVER price action. Each candlestick finalizes every **1 second**, giving you a clear visual history of where the price has been. Green candles mean the price rose during that second; red candles mean it fell.
+
+    <Tip>
+      Spend the first few seconds just watching. Spotting a run of green candles or a sharp drop can help you time your first move.
+    </Tip>
+  </Step>
+
+  <Step title="Buy SILVER">
+    When you think the price is about to rise, buy a share:
+
+    - Click the green **BUY** button on screen, **or**
+    - Press **B** on your keyboard.
+
+    Each action purchases **1 share** at the current market price, deducting that amount from your cash balance. You cannot buy more shares than your cash allows.
+  </Step>
+
+  <Step title="Sell SILVER">
+    When you want to lock in a profit (or cut a loss), sell a share:
+
+    - Click the red **SELL** button on screen, **or**
+    - Press **S** on your keyboard.
+
+    Each action sells **1 share** at the current market price, adding that amount back to your cash balance. You cannot sell shares you do not own.
+  </Step>
+
+  <Step title="Track Your Net Worth">
+    Keep an eye on your **net worth** displayed on screen. It updates every frame so you always know exactly where you stand. When your net worth is climbing, your strategy is working — when it drops, it may be time to rethink.
+  </Step>
+</Steps>
+
+---
+
+## Controls at a Glance
+
+| Action | Keyboard | On-Screen Button |
+|--------|----------|-----------------|
+| Buy 1 share | **B** | Green **BUY** button |
+| Sell 1 share | **S** | Red **SELL** button |
+| Stop simulation | **Q** | *(keyboard only)* |
+
+<Note>
+  Keyboard shortcuts and on-screen buttons are identical in effect — use whichever feels faster. Rapid traders often find the keyboard shortcuts quicker once they get into a rhythm.
+</Note>
+
+---
+
+## How Net Worth Is Calculated
+
+Your net worth is the real-time value of everything you own:
+
+```
+Net Worth = Cash + (Shares Owned × Current Price)
+```
+
+**Example:** You have $150.00 in cash and 4 shares while SILVER trades at $30.00.
+
+```
+Net Worth = $150.00 + (4 × $30.00) = $150.00 + $120.00 = $270.00
+```
+
+You start the game with **$250.00 cash** and **1 share** at an opening price of **$25.00**, giving you an initial net worth of **$275.00**. Every trade and every price movement shifts that number instantly.
+
+---
+
+## Price Floor & Random Market Events
+
+The SILVER price simulation includes two mechanics that keep things unpredictable:
+
+**Price Floor — $1.00 minimum**
+The price can never drop below $1.00. No matter how many crashes occur, you will never face a zero or negative price — though $1.00 is still painful if you bought in at $80.00.
+
+**Random Spikes & Crashes**
+Every frame, the simulation rolls the dice on two rare events:
+
+| Event | Magnitude | Approximate Odds |
+|-------|-----------|-----------------|
+| Price spike | **+$100.00** | 1 in 1,500 per frame |
+| Price crash | **−$200.00** | 1 in 3,000 per frame |
+
+<Note>
+  Because prices update every frame via `requestAnimationFrame` (roughly 60 times per second), a spike or crash can appear to happen almost instantaneously. Don't blink.
+</Note>
+
+These events stack on top of the normal random drift, so a spike can launch the price from $25 to $125 in a single frame, and a crash following a spike can erase all of those gains just as quickly.
+
+<Tip>
+  If you catch a spike early, selling quickly can lock in an enormous gain before the price drifts back down. Equally, holding through a crash and buying the dip is a classic recovery play.
+</Tip>
+
+---
+
+## Stopping and Restarting the Simulation
+
+**To stop:** Press **Q** on your keyboard. The simulation halts and the chart freezes at its current state. Your final cash, shares, and net worth remain visible on screen.
+
+**To restart:** Refresh the browser tab (or press `F5` / `Cmd+R`). This resets everything back to the starting state — **$250.00 cash, 1 share, $25.00 opening price**.
+
+<Note>
+  There is no in-game save feature. Once you refresh, your session's trade history and current portfolio are gone. Screenshot your final net worth if you want a record!
+</Note>
+
+---
+
+## Explore Further
+
+<CardGroup cols={2}>
+  <Card title="Reading the Chart" icon="chart-candlestick" href="/gameplay/chart">
+    Understand how the candlestick chart works, what each candle represents, and how to use price history to time your trades.
+  </Card>
+  <Card title="Buying & Selling" icon="arrow-right-arrow-left" href="/gameplay/buying-selling">
+    Deep dive into trade mechanics — when to buy, when to sell, and how to manage your cash and share balance effectively.
+  </Card>
+</CardGroup>

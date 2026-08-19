@@ -1,0 +1,58 @@
+---
+title: "Frequently Asked Questions About Mario Nintendo"
+sidebarTitle: "FAQ"
+description: "Answers to common questions about playing Mario Nintendo — setup, gameplay mechanics, price behavior, and the SILVER stock simulation."
+---
+
+Got questions about Mario Nintendo? You're in the right place. Below you'll find answers to the most common questions players ask about setup, gameplay, and how the SILVER price simulation behaves.
+
+<AccordionGroup>
+  <Accordion title="Do I need to install anything?">
+    No installation is required. Mario Nintendo runs entirely in your browser — just open **main.html** directly in any modern web browser (Chrome, Firefox, Edge, Safari) and the game starts immediately. There are no dependencies to install and no server to run.
+  </Accordion>
+
+  <Accordion title="Is this real money or real stocks?">
+    Neither. Mario Nintendo is a **completely fictional simulation**. You start with a virtual cash balance of $250.00 and trade a made-up asset called SILVER. No real money is involved, no real brokerage is connected, and SILVER prices have no relationship to any real-world commodity or financial market.
+  </Accordion>
+
+  <Accordion title="Why did the price suddenly jump or crash?">
+    The simulation includes two rare random events that can fire on any animation frame:
+
+    - **Spike** (1-in-1,500 chance per frame): instantly adds **+$100.00** to the current price.
+    - **Crash** (1-in-3,000 chance per frame): instantly subtracts **−$200.00** from the current price.
+
+    These events are intentional and add excitement to the game. Because frames run at roughly 60 per second, spikes and crashes are uncommon but will happen during a normal play session.
+  </Accordion>
+
+  <Accordion title="How do I restart the game?">
+    To restart from the beginning:
+
+    1. Press **Q** to stop the simulation.
+    2. Press **F5** (or use your browser's Refresh button) to reload the page.
+
+    This resets your cash to $250.00, your share count to zero, and the SILVER price back to $25.00.
+  </Accordion>
+
+  <Accordion title="Why can't I buy more shares?">
+    You can only buy a share if your available **cash is greater than or equal to the current SILVER price**. If the price has risen above your remaining cash balance, the buy action is blocked. Try waiting for the price to dip, or sell existing shares to free up cash.
+  </Accordion>
+
+  <Accordion title="Why can't I sell?">
+    You must hold **at least 1 share** to execute a sell. If your share count is zero, the sell action is unavailable. Buy a share first before attempting to sell.
+  </Accordion>
+
+  <Accordion title="What does the cyan line on the chart mean?">
+    The **cyan horizontal line** is the live current-price indicator. It updates every animation frame (~60 fps) and shows exactly where SILVER is trading right now, independent of the completed candlestick blocks. Use it to gauge whether the price is moving up or down within the current 1-second block before that block finalizes.
+  </Accordion>
+
+  <Accordion title="Can the price go to zero?">
+    No. The simulation enforces a **price floor of $1.00**. If a crash or a long run of negative ticks would push SILVER below $1.00, the engine clamps the price to $1.00 instead. The price can never reach zero or go negative.
+  </Accordion>
+
+  <Accordion title="How fast does the chart update?">
+    There are two distinct update rates:
+
+    - **Price ticker**: updates on every animation frame, roughly **60 times per second**. This is what drives the smooth price movement and the cyan current-price line.
+    - **Candlestick blocks**: a new OHLC candle is finalized and added to the chart every **1 second**. The chart displays the most recent ~32 blocks and auto-scrolls as new ones arrive.
+  </Accordion>
+</AccordionGroup>

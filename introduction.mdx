@@ -1,0 +1,48 @@
+---
+title: "Mario Nintendo: Real-Time Stock Simulator Overview"
+sidebarTitle: "Introduction"
+description: "Mario Nintendo is a browser-based stock market game. This page covers what the game is, what you start with, and how the simulation works."
+---
+
+Mario Nintendo is a fully browser-based fake stock market simulator. You trade a single fictional asset — **SILVER stock** — watching its price move in real time on a live candlestick chart. There is no signup, no install, and no server: just open the HTML file and start trading.
+
+## What Is Mario Nintendo?
+
+Mario Nintendo puts you in the role of a solo trader with a starting portfolio of $250 cash and 1 share of SILVER stock. Your goal is simple: grow your net worth by buying shares when prices are low and selling when they are high.
+
+The simulation runs entirely in your browser. Prices update every second and a new candlestick block forms every second, giving you a fast-moving chart to read and react to.
+
+## Starting Conditions
+
+| Setting | Value |
+|---|---|
+| Starting Cash | $250.00 |
+| Starting Shares | 1 share of SILVER |
+| Starting Price | $25.00 |
+| Candlestick Interval | 1 second per block |
+
+## How the Simulation Runs
+
+Every frame, the simulation nudges the SILVER price up or down by a tiny random percentage. Occasionally, a rare random event causes a sudden **+$100 spike** or a **−$200 crash**, keeping the market unpredictable.
+
+At the end of each 1-second interval, the current candlestick block is finalized and a new one begins. You can see the developing (active) block in real time as a hollow outline on the right side of the chart.
+
+<Info>
+  The price can never fall below **$1.00** — a built-in floor prevents the market from going to zero.
+</Info>
+
+## What You Can Do
+
+- **Buy shares** — spend cash to acquire more SILVER at the current price
+- **Sell shares** — convert shares back to cash at the current price
+- **Watch the chart** — read candlestick history and the live price line
+- **Track your portfolio** — see your cash, share count, and net worth at all times
+
+<CardGroup cols={2}>
+  <Card title="How to Play" icon="gamepad" href="/how-to-play">
+    Full walkthrough of the game from start to finish.
+  </Card>
+  <Card title="Reading the Chart" icon="chart-candlestick" href="/gameplay/chart">
+    Understand every element on the candlestick chart.
+  </Card>
+</CardGroup>

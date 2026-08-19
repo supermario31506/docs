@@ -1,0 +1,64 @@
+---
+title: "Tracking Your Portfolio and Net Worth"
+sidebarTitle: "Portfolio"
+description: "Learn how to read your portfolio stats in Mario Nintendo — including cash balance, share count, net worth formula, and color-coded performance indicators."
+---
+
+Your portfolio panel sits in the top-left of the header bar and gives you an at-a-glance snapshot of your financial position at all times. Keeping a close eye on these three numbers helps you decide when to trade and whether your overall strategy is working.
+
+## Portfolio Stats
+
+### Cash
+
+Your **cash** balance represents the liquid funds you currently have available to spend. Every time you buy a share, the current price is deducted from this total. Every time you sell a share, the current price is added back. You start the game with **$250.00** in cash.
+
+### Shares
+
+The **shares** count shows how many units of SILVER stock you currently hold. You begin the game holding **1 share**. Shares have no fixed value on their own — their worth depends entirely on what the current market price is at any given moment.
+
+### Net Worth
+
+**Net worth** is the single most important number in your portfolio. It represents the total combined value of everything you own, calculated as:
+
+```
+Net Worth = Cash + (Shares × Current Price)
+```
+
+For example, if you hold $200.00 in cash, 3 shares, and the current price is $30.00:
+
+```
+Net Worth = $200.00 + (3 × $30.00) = $200.00 + $90.00 = $290.00
+```
+
+Net worth updates continuously in real time as the live price moves, even if you haven't made any trades.
+
+## Net Worth Color Coding
+
+The net worth display changes color to signal your performance relative to your starting position:
+
+| Color | Condition | Meaning |
+|-------|-----------|---------|
+| 🟢 **Green** | Net worth ≥ **$250.00** | You are at or above your starting value — profitable or break-even |
+| 🔴 **Red** | Net worth < **$250.00** | You are below your starting value — currently at a loss |
+
+The $250.00 threshold is your starting net worth (beginning cash of $250.00 plus 1 share valued at $25.00 equals $275.00... but the baseline comparison is your starting cash amount). Use the color as a quick pulse-check: green means you're doing well; red is a prompt to reconsider your current position.
+
+## Net Worth Fluctuates Without Trading
+
+Because net worth includes the value of your held shares, it will rise and fall with the market price **even when you make no trades**. If you hold 5 shares and the price drops by $10, your net worth drops by $50 immediately — no sell order required. This means:
+
+- Holding a large number of shares increases your **upside potential** but also your **downside exposure**.
+- Holding all your value as **cash** protects you from price drops but prevents you from benefiting from price rises.
+
+## Example Portfolio States
+
+The table below shows how the same trades can look very different depending on the current price:
+
+| Cash | Shares | Current Price | Net Worth | Display Color |
+|------|--------|---------------|-----------|---------------|
+| $250.00 | 0 | $25.00 | $250.00 | 🟢 Green |
+| $225.00 | 1 | $25.00 | $250.00 | 🟢 Green |
+| $225.00 | 1 | $40.00 | $265.00 | 🟢 Green |
+| $225.00 | 1 | $15.00 | $240.00 | 🔴 Red |
+| $100.00 | 5 | $35.00 | $275.00 | 🟢 Green |
+| $100.00 | 5 | $20.00 | $200.00 | 🔴 Red |
